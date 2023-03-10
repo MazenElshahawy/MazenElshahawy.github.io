@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warehouse Managament</title>
+  <link rel="stylesheet" href="Css/bootstrap.min.css">
+  <link rel="stylesheet" href="Css/Style.css">
+</head>
+
+<body>
+
+  <div class="CrudContainer" id="container">
+
+    <h1 class="animate-charcter"> Warehouse     CRUD     Project </h1>
+
+
+    <div class="container">
+
+      <div class="box">
+        <form>
+          <div class="input-container">
+            <input type="text" id="title" />
+            <label>Full Name</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="inputs">
+        <div class="priceCalculation">
+          <div class="detailsBox">
+            <form>
+              <div class="input-container">
+                <input onkeyup="getTotal()" type="number" id="price" />
+                <label>Main price</label>
+              </div>
+            </form>
+          </div>
+          <div class="detailsBox">
+            <form>
+              <div class="input-container">
+                <input onkeyup="getTotal()" type="number" id="taxes" />
+                <label>Taxes</label>
+              </div>
+            </form>
+          </div>
+          <div class="detailsBox">
+            <form>
+              <div class="input-container">
+                <input onkeyup="getTotal()" type="number" id="ads" />
+                <label>Ads. </label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <div class="buttons" id="buttonsArea">
+          <button class="addButton " id="addBtn"> Add </button>
+          <button class="updateButton hide" id="updatebtn"> Update </button>
+          <button class="clearButton" id="clearBtn"> Clear </button>
+          <div id="deleteAll">
+
+          </div>
+        </div>
+
+
+        <div class="quantityInfo">
+          <div class="detailsBox">
+            <form>
+              <div class="input-container">
+                <input type="number" id="quantity" />
+                <label>Quantity</label>
+              </div>
+            </form>
+          </div>
+          <div class="detailsBox">
+            <form>
+              <div class="input-container">
+                <input type="text" id="category" />
+                <label>Category</label>
+              </div>
+            </form>
+          </div>
+          <div class="detailsBox">
+            <form>
+              <div class="input-container">
+                <input type="number" id="release" />
+                <label>Release year</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="result">
+        <h4 id="total"></h4>
+      </div>
+
+
+    </div>
+
+
+    <div class="outputs">
+      <div class="searchElements">
+        <button class="categorySearch">Search by category</button>
+        <div class="searchBar">
+
+          <input type="text" id="searchBar" placeholder="Search..." oninput="SearchProd(this.value)">
+
+        </div>
+        <button class="titleSearch">Search by title</button>
+      </div>
+
+      <table class="table tble">
+        <tr>
+          <th scope="col"> # </th>
+          <th scope="col"> Title </th>
+          <th scope="col"> Price </th>
+          <th scope="col"> Taxes </th>
+          <th scope="col"> Ads. </th>
+          <th scope="col"> Category</th>
+          <th scope="col"> Release Year </th>
+          <th scope="col"> Control </th>
+        </tr>
+        <tbody id="tableData">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+  <script src="js/Main.js"></script>
+</body>
